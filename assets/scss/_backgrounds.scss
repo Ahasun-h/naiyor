@@ -1,0 +1,21 @@
+.bg-light {
+    background: $white;
+}
+
+.bg-gray {
+    background: #F5F5F5;
+}
+
+.bg-1 {
+    background-image: url('../img/baground_images/hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-2 {
+    background-image: url('../img/baground_images/search-bg.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

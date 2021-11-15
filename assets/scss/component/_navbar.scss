@@ -1,0 +1,138 @@
+@import "../variable";
+
+.main-menu
+{
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+  position: fixed;
+  background: transparent;
+  .navbar
+  {
+    padding: 24px 0%;
+    background-color: transparent;
+    .container-fluid
+    {
+      width: 82%;
+      margin: auto;
+      background-color: $white;
+      padding: 12px 2%;
+      border-radius: 14px;
+      #navbarNav
+      {
+        position: relative;
+        // ul
+        .navbar-nav
+        {
+          text-align: right;
+          background: transparent;
+          right: 0px;
+          position: absolute;
+          // li
+          .nav-item
+          {
+            list-style: none;
+            // a tag
+            .nav-link
+            {
+              display: block;
+              text-decoration: none;
+              font-size: 1em;
+              font-family: $fontRoboto;
+              font-weight: 500;
+              color: $black;
+              padding: 0px 20px;
+            }
+            .active{
+              color: $SubColorTwo;
+              font-weight: 500;
+            }
+          }
+          @media (min-width:250px) and (max-width:991px) 
+          {
+            width: 100%;
+            text-align: left;
+            position: absolute;
+            padding: 18px 7%;
+            margin: 12px auto 0px;
+            background: #fff;
+            border-radius: 0px 0px 8px 8px;
+          }
+        }
+      } 
+      .navbar-toggler{
+        color: $SubColorTwo;
+        font-size: 22px;
+        i{
+          display: none;
+        }
+        .active{
+          display: block;
+        }
+       
+      }  
+    }
+  }
+
+  // Scrolled 
+  .navbar-scrolled{
+    background:#fff;
+    box-shadow: -5px 1px 13px gray;
+  }
+
+  // Mobile Side Bar Menu
+  .mobile_nav 
+  {
+        width: 70%;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        img{
+          padding-left: 32px;
+        }
+        .closebtn{
+          text-align: end;
+        }
+        a 
+        {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          &:hover{
+            color: #f1f1f1;
+          }
+
+          @media screen and (max-height: 450px) {
+            font-size: 18px;
+          }
+
+          .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+        }
+        @media screen and (max-height: 450px) {
+          padding-top: 15px;
+        }
+  }
+
+  .mobile_nav-width{
+    width: 70%;
+    height: 100vh;
+  }
+  
+      
+  
+}

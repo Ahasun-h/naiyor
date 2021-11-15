@@ -1,0 +1,61 @@
+@import "../variable";
+
+.search{
+    height: auto;
+    width: 100%;
+    padding: 40px 0px;
+
+    .container{
+        .tabs{
+            width: 72%;
+            background-color: $white;
+            margin: auto;
+            padding: 0 10%;
+            border-radius: 8px;
+            .row{
+                li{
+                    list-style: none;
+                    text-align: center;
+                    a{
+                        font-size: 18px;
+                        font-weight: 500;
+                        display: block;
+                        color: $black;
+                        text-decoration: none;
+                        padding: 12px 0px;
+                    }
+                }
+
+                .active {
+                    a{
+                        color: $SubColorTwo;
+                        border-bottom: 4px solid $SubColorTwo;
+                    }
+                }
+            }
+        }
+
+        .tab_wrap{
+            background-color: $white;
+            border-radius: 8px;
+            padding: 20px 20px;
+
+            .tab_content{
+                .row{
+                    .Traveling_way{
+                        font-size: 18px;
+                    }
+                    .traveler_class{
+                        border:1px solid $SubColorTwo;
+                        border-radius: 8px;
+                        padding: 14px 0px 0px;
+                        color: $SubColorTwo;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
