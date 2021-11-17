@@ -411,7 +411,6 @@ var plyrInit = function plyrInit() {
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */
 
-
 docReady(navbarInit);
 docReady(detectorInit);
 docReady(plyrInit);

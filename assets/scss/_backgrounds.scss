@@ -19,3 +19,39 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.bg-3{
+    background-image: url('../img/baground_images/app_section_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.app_store{
+    background-image: url('../img/app_section/app_store.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.play_store{
+    background-image: url('../img/app_section/play_store.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.bg-4{
+    background-image: url('../img/baground_images/priceing_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-5{
+    background-image: url('../img/baground_images/testimonials.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}

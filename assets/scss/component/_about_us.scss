@@ -3,19 +3,32 @@
     background-color: #F5F5F5;
     padding: 7em 0;
     .container {
-        .section_title {
-            display: flex;
-            h4 {
-                font-size: 18px;
-                font-weight: 400;
+        hr{
+            width: 20%;
+            border: 2px solid $SubColorTwo;
+            position: relative;
+            border-radius: 50px;
+            margin-left: 6%;
+            &:before {
+                font-family: "Roboto", sans-serif;
+                content: 'ABOUT US';
                 color: $black;
-                font-family: $fontRoboto;
+                display: block;
+                width: auto;
+                padding: 0.3em;
+                font-size: $contentText;
+                text-align: center;
+                position: absolute;
+                top: -6px;
+                background-color: #F5F5F5;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+              
             }
-            hr {
-                width: 10%;
-                height: 4px;
-                border-radius: 2px;
-                background-color: $SubColorTwo;
+            @media (min-width:250px) and (max-width:767px) 
+            {
+                width: 30%;
+                margin-left: 10%;
             }
         }
         .about_content {
@@ -82,6 +95,11 @@
                         }
                     }
                 }
+            }
+
+            @media (min-width:250px) and (max-width:767px) 
+            {
+                margin-top: 22px;
             }
         }
     }
