@@ -1,0 +1,58 @@
+@import "../variable";
+
+.hot_deals{
+    .container{
+        .row{
+            .hot_deals_slider{
+                .item{
+                    .card{
+                        border:0px solid transparent;
+                        .card-body{
+                            width: 100%;
+                            height: auto;
+                            
+                            
+                            img{
+                                width: 130px;
+                                height: 90px;
+                                margin-bottom: -44px;
+                                margin-left: 10px;
+                            }
+                            .hot_deals_content{
+                                padding: 46px 16px 20px 16px;
+                                border-radius: 6px;
+                                background-color: $white;
+                                box-shadow: 1px 1px 6px #79797961;
+                                h5{
+                                    font-size: 18px;
+                                    text-align: left;
+                                    color: green;
+                                    font-weight: 700;
+                                }
+                                p{
+                                    font-size: 16px;
+                                    text-align: left;
+                                    color: green;
+                                    font-weight: 300;
+                                }
+                            }
+                            button{
+                                color: $white;
+                                font-size: $contentTextMid;
+                                text-align: center;
+                                border-radius: 8px;
+                                background-color: $SubColorTwo;
+                                padding: 8px 32px;
+                                display: block;
+                                margin: auto;
+                                border:0px solid transparent;
+                                margin-top: -20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}

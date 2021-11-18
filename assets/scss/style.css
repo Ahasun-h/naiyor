@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *,
 *::before,
 *::after {
@@ -1222,8 +1223,8 @@ progress {
 .about_us .container .about_block_item div div {
   padding: 22px 2% 10px;
   border-radius: 12px;
-  -webkit-box-shadow: 4px 6px 7px #343434;
-          box-shadow: 4px 6px 7px #343434;
+  -webkit-box-shadow: 1px 5px 6px #31313154;
+          box-shadow: 1px 5px 6px #31313154;
 }
 
 .about_us .container .about_block_item div div i {
@@ -1662,5 +1663,56 @@ progress {
 .testimonials .row .owl-theme .owl-dots .owl-dot.active span,
 .testimonials .row .owl-theme .owl-dots .owl-dot:hover span {
   background: #316ce8;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card {
+  border: 0px solid transparent;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card .card-body {
+  width: 100%;
+  height: auto;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card .card-body img {
+  width: 130px;
+  height: 90px;
+  margin-bottom: -44px;
+  margin-left: 10px;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card .card-body .hot_deals_content {
+  padding: 46px 16px 20px 16px;
+  border-radius: 6px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 6px #79797961;
+          box-shadow: 1px 1px 6px #79797961;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card .card-body .hot_deals_content h5 {
+  font-size: 18px;
+  text-align: left;
+  color: green;
+  font-weight: 700;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card .card-body .hot_deals_content p {
+  font-size: 16px;
+  text-align: left;
+  color: green;
+  font-weight: 300;
+}
+
+.hot_deals .container .row .hot_deals_slider .item .card .card-body button {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #108C03;
+  padding: 8px 32px;
+  display: block;
+  margin: auto;
+  border: 0px solid transparent;
+  margin-top: -20px;
 }
 /*# sourceMappingURL=style.css.map */
