@@ -10,9 +10,23 @@ $SubColorThree: #FEBA12;
 $SubColorFour: #F8076E;
 $SubColorFive:#05ABAA;
 $SubColorSix:#FEBA12;
-// Font screen size 992px to More 
-$title: 36px;
-$contentText: 20px;
-// Font screen size 768px to 991px 
-$titleMid: 28px;
-$contentTextMid: 16px;
+$border:#A4A3A3;
+
+// Font size for Large screen
+$title-lg : 52px;
+$title-md : 46px;
+$title-sm : 32px;
+
+// Font size for Mid screen
+$sub-title-lg : 36px;
+$sub-title-md : 28px;
+$sub-title-sm : 24px;
+
+// Font size for Small screen
+$content-text-lg: 20px;
+$content-text-md: 18px;
+$content-text-sm: 16px;
+
+
+$section-title-lg: 20px;
+

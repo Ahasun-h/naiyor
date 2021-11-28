@@ -753,6 +753,18 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
+p{
+  @media (min-width:250px) and (max-width:767px) {
+    font-size: $content-text-sm;
+  }
+  @media (min-width:768px) and (max-width:991px) {
+    font-size: $content-text-md;
+  }
+  @media (min-width:992px) and (max-width:1400px) {
+    font-size: $content-text-md;
+  }
+}
+
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     overflow-x: auto;

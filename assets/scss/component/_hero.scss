@@ -1,82 +1,120 @@
 @import "../variable";
 
+
+
+
 .hero{
-    height: 100vh;
+    height: auto;
     width: 100%;
-    position: relative;
-    @media (min-width:250px) and (max-width:767px) 
-    {
-        position: none;
-    }        
+    padding: 140px 0px;
+    
+           
     .container{
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
+        
         margin: auto;
         .row{
-            @media (min-width:250px) and (max-width:767px) 
+            @media (min-width:250px) and (max-width:575px) 
             {
-                position: none;
+                margin: 0 4%;
             }
             .hero-image{
                 @media (min-width:250px) and (max-width:767px) 
                 {
-                    height: 220px;
+                    height: auto;
                 }
-            }
 
-            .hero-content{
-               h3{
-                   font-size: $title;
-                   color: $black;
-                   font-weight: 700;
-                   text-align: left;
-
-                   @media (min-width:768px) and (max-width:991px)
-                   {
-                       font-size: $titleMid;
-                   }
-
-                   @media (min-width:250px) and (max-width:767px) 
-                    {
-                        font-size: $titleMid;
-                    }
-               }
-               p{
-                    font-size: $contentText;
-                    text-align: left;
-                    font-weight: 500;
-                    color: $black;
-                    @media (min-width:768px) and (max-width:991px) 
-                    {
-                        font-size: $contentTextMid;
-                    }
+                img{
+                    width: 100%;
                     @media (min-width:250px) and (max-width:767px) 
                     {
-                        font-size: $contentTextMid;
+                        height: 280px;
+                        width: auto;
                     }
+                }
+
+                .tag-title-content{
+
+                    margin-top: 24px;
+
+                    h1{
+                        font-size: $title-lg;
+                        color: #343434;
+                        font-family: "Roboto", sans-serif;
+                        font-weight: 800;
+                        text-align: left;
+                        line-height: 1.1;
+
+                        @media (min-width:540px) and (max-width:767px) {
+                            font-size: $title-md;
+                        }
+
+                        @media (min-width:230px) and (max-width:539px) {
+                            font-size: $title-sm;
+                        }
+
+                    }
+
+                    p{
+                        color: $black;
+                        text-align: left;
+                    }
+                }
+
+                
+            }
+
+            .hero-form{
+
+                background-color: rgba(216, 227, 218, 0.7);
+                padding: 40px 4%;
+                border-radius: 20px;
+
+                h5{
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: 700;
+                    color: $black;
+                    margin-bottom:40px;
+                }
+
+                form{
                     
-               }
-               button{
-                   background-color: $SubColorTwo;
-                   color: $white;
-                   font-size: 18px;
-                   border-radius: 8px;
-                   border:0px solid transparent;
-                   font-weight: 500;
-                   padding: 12px 32px;
-                   @media (min-width:768px) and (max-width:991px) 
-                   {
-                        font-size: 16px;
-                        padding: 8px 26px;
-                   }
-                   @media (min-width:250px) and (max-width:767px) 
-                   {
-                        font-size: 16px;
-                        padding: 8px 26px;
-                   }
-               }
+                    div{
+                        input{
+                            padding: 12px;
+                            border-radius: 8px;
+                            border: 1px solid $border;
+                        }
+
+                        .arrival-time-row{
+                            @media (min-width:250px) and (max-width:991px) {
+                                margin: 20px auto;
+                            }
+                        }
+
+                        
+                    }
+
+                    button{
+                        background-color: $SubColorTwo;
+                        color: $white;
+                        font-size: 18px;
+                        border-radius: 8px;
+                        border: 0px solid transparent;
+                        font-weight: 500;
+                        padding: 12px 32px;
+                        margin: auto;
+                        display: block;
+                        
+                    }
+                      
+                }
+               
+                @media (min-width:250px) and (max-width:767px) 
+                {
+                    border-radius: 10px;       
+                }
+               
             }
         }
     }

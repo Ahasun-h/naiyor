@@ -1,0 +1,126 @@
+@import "../variable";
+.career{
+    background-color: #F5F5F5;
+    padding: 50px 0;
+    .container{
+        .row{
+            div{
+                hr{
+                    width: 20%;
+                    border: 2px solid $SubColorTwo;
+                    position: relative;
+                    border-radius: 50px;
+                    margin-left: 6%;
+                    &:before {
+                        font-family: "Roboto", sans-serif;
+                        content: 'CAREER';
+                        color: $black;
+                        display: block;
+                        width: auto;
+                        padding: 0.3em;
+                        font-size: $section-title-lg;
+                        text-align: center;
+                        position: absolute;
+                        top: -6px;
+                        background-color: #F5F5F5;
+                        -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                      
+                    }
+                    @media (min-width:250px) and (max-width:767px) 
+                    {
+                        width: 30%;
+                        margin-left: 10%;
+                    }
+                }
+
+                h1{
+                    font-size: $title-lg;
+                    color: #343434;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 800;
+                    text-align: left;
+                    line-height: 1.1;
+                    margin-top: 40px;
+
+                    @media (min-width:540px) and (max-width:767px) {
+                        font-size: $title-md;
+                    }
+
+                    @media (min-width:230px) and (max-width:539px) {
+                        font-size: $title-sm;
+                    }
+
+                    span{
+                        color: $SubColorTwo;
+                    }
+
+                }
+
+                p{
+                    color: $black;
+                    text-align: left;
+
+                }
+
+                button {
+                    background-color: $SubColorThree;
+                    color: $white;
+                    font-size: 18px;
+                    border-radius: 8px;
+                    border: 0px solid transparent;
+                    font-weight: 500;
+                    padding: 12px 32px;
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        font-size: 16px;
+                        padding: 8px 26px;
+                    }
+                    @media (min-width:250px) and (max-width:767px) {
+                        font-size: 16px;
+                        padding: 8px 26px;
+                    }
+                }
+
+                form{
+                    background-color: $white;
+                    padding: 54px 10%;
+                    box-shadow: 0px 0px 8px #a2a2a282;
+                    div{
+                        h5{
+                            font-size: 18px;
+                            font-family: $fontRoboto;
+                            font-weight: 700;
+                            text-align: left;
+                            color: $SubColorTwo;
+                        }
+                        h6{
+                            font-size: 18px;
+                            font-family: $fontRoboto;
+                            font-weight: 700;
+                            text-align: left;
+                            color: $black;
+                        }
+                        input{
+                            padding: 12px;
+                            border-radius: 8px;
+                            border: 1px solid $border;
+                        }
+                        select{
+                            padding: 12px;
+                            border-radius: 8px;
+                            border: 1px solid $border;
+                            &:before {
+
+                            }
+                        }
+
+                    }
+                }
+                @media (min-width:250px) and (max-width:991px) {
+                    margin: 10px 0;
+                    
+                }
+            }
+        }
+    }
+}
