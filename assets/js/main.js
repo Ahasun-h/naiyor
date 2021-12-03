@@ -1,7 +1,6 @@
 jQuery(function($) {
 
-
-
+    // Mobile Menu
 
     $("#navbar-toggler").on("click", function(e) {
         e.preventDefault();
@@ -26,26 +25,69 @@ jQuery(function($) {
         }
     });
 
-    var tabs = document.querySelectorAll(".tabs ul li");
-    var tab_wraps = document.querySelectorAll(".tab_wrap");
+    $(function(){
+        new WOW().init(); 
+    });
+        
 
-    tabs.forEach(function(tab, tab_index) {
-        tab.addEventListener("click", function() {
-            tabs.forEach(function(tab) {
-                tab.classList.remove("active");
-            })
-            tab.classList.add("active");
+    // testimonials
+    $('.testimonial_slider').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            1024: {
+                items: 2
+            }
+        }
+    });
 
-            tab_wraps.forEach(function(content, content_index) {
-                if (content_index == tab_index) {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
+
+        // ===== Scroll to Top ==== 
+        $(function(){
+            //Get the button
+            let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+                // When the user clicks on the button, scroll to the top of the document
+                mybutton.addEventListener("click", backToTop);
+
+                function backToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
                 }
-            })
-
         })
-    })
+
+        // Preloader
+        $(window).on('load', function() {
+            $('#preloader-active').delay(450).fadeOut('slow');
+            $('body').delay(450).css({
+                'overflow': 'visible'
+            });
+        });
+
+    
 
 
 
