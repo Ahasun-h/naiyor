@@ -12,23 +12,30 @@
     .container{
         
         margin: auto;
-        .row{
+        
             @media (min-width:250px) and (max-width:575px) 
             {
-                margin: 0 4%;
+                margin: 0 1%;
             }
             .hero-image{
+                margin-bottom: 20px;
+            
                 @media (min-width:250px) and (max-width:767px) 
                 {
                     height: auto;
                 }
 
                 img{
-                    width: 100%;
+                    width: 430px;
+                    @media (min-width:768px) and (max-width:991px) {
+                        width: 348px;
+                        display: none;
+                    }
                     @media (min-width:250px) and (max-width:767px) 
                     {
                         height: 280px;
                         width: auto;
+                        display: none;
                     }
                 }
 
@@ -43,7 +50,9 @@
                         font-weight: 800;
                         text-align: left;
                         line-height: 1.1;
-
+                        @media (min-width:768px) and (max-width:991px) {
+                            font-size: $title-md;
+                        }
                         @media (min-width:540px) and (max-width:767px) {
                             font-size: $title-md;
                         }
@@ -52,8 +61,12 @@
                             font-size: $title-sm;
                         }
 
-                    }
+                        span {
+                            color: $SubColorTwo;
+                        }
 
+                    }
+                    
                     p{
                         color: $black;
                         text-align: left;
@@ -86,6 +99,12 @@
                             border: 1px solid $border;
                         }
 
+                        textarea{
+                            padding: 12px;
+                            border-radius: 8px;
+                            border: 1px solid $border;
+                        }
+
                         .arrival-time-row{
                             @media (min-width:250px) and (max-width:991px) {
                                 margin: 20px auto;
@@ -93,6 +112,12 @@
                         }
 
                         
+                    }
+
+                    .pt-sm{
+                        @media (min-width:250px) and (max-width:575px) {
+                            padding: 0 5%;
+                        }
                     }
 
                     button{
@@ -107,15 +132,13 @@
                         display: block;
                         
                     }
-                      
                 }
                
                 @media (min-width:250px) and (max-width:767px) 
                 {
                     border-radius: 10px;       
                 }
-               
             }
-        }
+        
     }
 }

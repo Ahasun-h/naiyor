@@ -32,9 +32,15 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
 
-
+    <!-- OwlCarousel -->
     <link href="./plugins/OwlCarousel2/owl.carousel.min.css" rel="stylesheet" />
     <link href="./plugins/OwlCarousel2/owl.theme.default.min.css" rel="stylesheet" />
+
+    <!-- floating-totop -->
+    <link href="./plugins/floating-back-top-button/css/floating-totop-button.min.css" rel="stylesheet" />
+
+    <!-- Animation CSS Link -->
+    <link rel="stylesheet" href="./plugins/Animate_css/animate.min.css" rel="stylesheet" />
 
 
 
@@ -44,7 +50,20 @@
 </head>
 
 
-<body>
+<body onload="screenLoad()" style="scroll-behavior: smooth;">
+
+    <!--? Preloader Start -->
+
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ===============================================-->
     <!--    Main Content   -->
@@ -75,16 +94,16 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="#about_us">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
+                                <a class="nav-link" href="#features">Features</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Career</a>
+                                <a class="nav-link" href="#career">Career</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -96,10 +115,10 @@
             <div id="mobile_nav" class="mobile_nav">
                 <a id="closebtn" class="closebtn">&times;</a>
                 <img class="mobile_nav_logo" src="assets/img/logo-tow.png" alt="" />
-                <a href="#" id="closebtn">About</a>
-                <a href="#" id="closebtn">Services</a>
-                <a href="#" id="closebtn">Clients</a>
-                <a href="#" id="closebtn">Contact</a>
+                <a href="#about_us" id="closebtn">About Us</a>
+                <a href="#features" id="closebtn">Features</a>
+                <a href="#career" id="closebtn">Career</a>
+                <a href="#contact" id="closebtn">Contact</a>
             </div>
             <!-- /Mobile Side Menu -->
 
@@ -107,117 +126,163 @@
         <!-- /Header -->
 
         <!-- Hero Section -->
-        <section class="hero bg-1">
+        <section class="hero bg-1" id="hero">
             <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="hero-image col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                        <img src="./assets/img/hero_section/hero_image_one.svg" alt="" />
-                        <div class="tag-title-content">
-                            <h1>GET YOURSELF THE BEST SERVICE</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                
+                    <div class="hero-image col-12 row justify-content-center align-items-center">
+                        <img class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 wow bounceInUp" src="./assets/img/hero_section/hero_image_one.png" alt="" />
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tag-title-content wow bounceInLeft" >
+                            <h1>THE COMPLETE <span>TRAVEL SOLUTION</span></h1>
+                            <p>Naiyor is a digital platform with complete travel solution. It intends to provide comfortable, safe and economical travel to Bangladesh.</p>
                         </div>
                     </div>
-                    <div class="hero-form col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                        <h5>Get Quotation</h5>
-                        <form>
-                            <div class="mb-3">
-                              <input type="text" placeholder="Full Name" class="form-control" id="InputName" aria-describedby="name">
+                    <div class="hero-form col-12">
+                        <h5 data-v-4d76ff6b="">Get Your Taxi</h5>
+                        <form class="row" data-v-4d76ff6b="">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 pt-3" data-v-4d76ff6b="">
+                                <label class="form-label" for="name" data-v-4d76ff6b="">Name</label>
+                                <input id="name" autofocus="" class="form-control" required="" type="text" data-v-4d76ff6b="">
+                                <!--v-if-->
                             </div>
-                            <div class="mb-3">
-                             
-                                <input type="email" placeholder="Email" class="form-control" id="InputEmail" aria-describedby="email">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 pt-3" data-v-4d76ff6b="">
+                                <label class="form-label" for="email" data-v-4d76ff6b="">Email</label>
+                                <input id="email" class="form-control" required="" type="email" data-v-4d76ff6b="">
+                                <!--v-if-->
                             </div>
-                            <div class="mb-3">
-                                <input type="text" placeholder="Mobile Number" class="form-control" id="InputMobileNumber" aria-describedby="mobileNumber">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" placeholder="Bangladeshi Contact Number" class="form-control" id="InputBDContactNumber" aria-describedby="bDContactNumber">
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                    <input type="text" placeholder="Flight Number" class="form-control" id="InputFlightNumber" aria-describedby="flightNumber">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-3 row gx-0 gx-md-3" data-v-4d76ff6b="">
+                                <div class="col-12 col-md-6 mb-0 mb-sm-3 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="phone" data-v-4d76ff6b="">Mobile Number</label>
+                                    <input id="phone" class="form-control" required="" type="text" data-v-4d76ff6b="">
+                                    <!--v-if-->
                                 </div>
-                                
-                                <div class="row arrival-time-row mb-3 col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 align-items-center">
-                                    <label for="ArrivalTime" class="col-6 col-form-label col-form-label-md">Arrival Time</label>
-                                    <div class="col-6">
-                                        <input type="time" class="form-control form-control-md" id="ArrivalTime" placeholder="">
+                                <div class="col-12 col-md-6 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="bd_contact" data-v-4d76ff6b="">BD Contact Number</label>
+                                    <input id="bd_contact" class="form-control" required="" type="text" data-v-4d76ff6b="">
+                                    <!--v-if-->
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-3" data-v-4d76ff6b="">
+                                <label class="form-label" for="source" data-v-4d76ff6b="">From</label>
+                                <div class="position-relative" data-v-4d76ff6b="">
+                                    <input id="source" autocomplete="off" class="form-control" required="" type="text" data-v-4d76ff6b="">
+                                    <div class="position-absolute w-100 list-group z-100" data-v-4d76ff6b="" style="display: none;">
+                                        <!--v-if-->
                                     </div>
                                 </div>
+                                <!--v-if-->
                             </div>
-
-                            <div class="row mb-3">
-                                <label for="NumberOfLuggage" class="col-12 col-sm-6 col-form-label col-form-label-md">Number of passengers</label>
-                                <div class="col-6 col-sm-3">
-                                  <input type="number" class="form-control form-control-md" id="NumberOfLuggage" placeholder="Adult">
-                                </div>
-                                <div class="col-6 col-sm-3">
-                                    <input type="number" class="form-control form-control-md" id="NumberOfLuggage" placeholder="Child">
-                                  </div>
-                            </div>
-                           
-                            <div class="row mb-3">
-                                <label for="NumberOfLuggage" class="col-7 col-form-label col-form-label-md">Number of luggage</label>
-                                <div class="col-5">
-                                  <input type="number" class="form-control form-control-md" id="NumberOfLuggage" placeholder="">
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" placeholder="Source" class="form-control" id="Source" aria-describedby="Source">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" placeholder="Destination" class="form-control" id="Destination" aria-describedby="Destination">
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="mb-3 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 row">
-                                    <label for="Date" class="col-6 col-sm-6 col-md-4 col-form-label col-form-label-md">Date</label>
-                                    <div class="col-6 col-sm-6 col-md-8">
-                                    <input type="date" class="form-control form-control-md" id="Date" placeholder="">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-3" data-v-4d76ff6b="">
+                                <label class="form-label" for="destination" data-v-4d76ff6b="">Destination</label>
+                                <div class="position-relative" data-v-4d76ff6b="">
+                                    <input id="destination" autocomplete="off" class="form-control" required="" type="text" data-v-4d76ff6b="">
+                                    <div class="position-absolute w-100 list-group z-100" data-v-4d76ff6b="" style="display: none;">
                                     </div>
                                 </div>
-                                <div class="mb-3 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 row">
-                                    <label for="Time" class="col-6 col-form-label col-form-label-md">Time</label>
-                                    <div class="col-6">
-                                    <input type="time" class="form-control form-control-md" id="Time" placeholder="">
-                                    </div>
+                                <!--v-if-->
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-6 pt-3 row gx-0 gx-md-3" data-v-4d76ff6b="">
+                                <div class="col-12 col-md-6 mb-3 mb-sm-0 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="date" data-v-4d76ff6b="">Date</label>
+                                    <input id="date" class="form-control" required="" type="date" data-v-4d76ff6b="">
+                                    <!--v-if-->
+                                </div>
+                                <div class="col-12 col-md-6 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="time" data-v-4d76ff6b="">Time</label>
+                                    <input id="time" class="form-control" required="" type="time" data-v-4d76ff6b="">
+                                    <!--v-if-->
                                 </div>
                             </div>
-
-
-                            
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-3 row gx-0 gx-md-3" data-v-4d76ff6b="">
+                                <div class="col-12 col-md-6 mb-0 mb-sm-3 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="passengers" data-v-4d76ff6b="">Number of Passengers</label>
+                                    <div id="passengers" class="input-group" data-v-4d76ff6b="">
+                                        <input id="adult" class="form-control" max="20" min="1" placeholder="adult" required="" type="number" data-v-4d76ff6b="">
+                                        <input id="child" class="form-control" max="20" min="0" placeholder="child" required="" type="number" data-v-4d76ff6b="">
+                                    </div>
+                                    <!--v-if-->
+                                    <!--v-if-->
+                                </div>
+                                <div class="col-12 col-md-6 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="luggage" data-v-4d76ff6b="">Number of Luggage</label>
+                                    <div class="input-group" data-v-4d76ff6b="">
+                                        <input id="luggage" class="form-control" max="60" min="0" placeholder="big" required="" type="number" data-v-4d76ff6b="">
+                                        <input class="form-control" max="60" min="0" placeholder="hand" required="" type="number" data-v-4d76ff6b="">
+                                    </div>
+                                <!--v-if-->
+                                <!--v-if-->
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-3 row gx-0 gx-md-3" data-v-4d76ff6b="">
+                                <div class="col-12 col-md-6 mb-3 mb-sm-0 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="flight_number" data-v-4d76ff6b="">Flight Number</label>
+                                    <input id="flight_number" class="form-control" type="text" data-v-4d76ff6b="">
+                                    <!--v-if-->
+                                </div>
+                                <div class="col-12 col-md-6 pt-sm" data-v-4d76ff6b="">
+                                    <label class="form-label" for="arrival_time" data-v-4d76ff6b="">Arrival Time</label>
+                                    <input id="arrival_time" class="form-control" type="time" data-v-4d76ff6b="">
+                                    <!--v-if-->
+                                </div>
+                            </div>
+                            <div class="pt-3" data-v-4d76ff6b="">
+                                <label class="form-label" for="remarks" data-v-4d76ff6b="">Remarks</label>
+                                <textarea id="remarks" class="form-control" rows="3" type="text" data-v-4d76ff6b="">
+                                </textarea>
+                                <!--v-if-->
+                            </div>
+                            <div class="pt-3" data-v-4d76ff6b="">
+                                <div class="form-check" data-v-4d76ff6b="">
+                                    <input id="security" class="form-check-input pr-3" type="checkbox" data-v-4d76ff6b="">
+                                    <label class="form-check-label" for="security" data-v-4d76ff6b=""> Need Security Escort </label>
+                                </div>
+                            </div>
+                            <div class="pt-3" data-v-4d76ff6b="">
+                                <div class="form-check" data-v-4d76ff6b="">
+                                    <input id="protocol" class="form-check-input pr-3" type="checkbox" data-v-4d76ff6b="">
+                                    <label class="form-check-label" for="protocol" data-v-4d76ff6b=""> Need Airport Assistance </label>
+                                </div>
+                            </div>
+                            <button class="mt-4 justify-content-center btn btn-success btn-lg" data-v-4d76ff6b="">Submit</button>
                         </form>
                     </div>
-                </div>
+                
             </div>
         </section>
         <!-- Hero Section -->
 
-    
-
-       
 
         <!-- ABOUT US -->
-        <section class="about_us">
+        <section class="about_us" id="about_us">
             <div class="container">
                 <hr>
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 about_content">
-                        <h2 class="title">
+                        <h2 class="title wow bounceInLeft">
                             GREAT <span>SERVICE</span> REQUIRES GREAT <span>EXPERTISE</span>
                         </h2>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                        <button>Learn More</button>
+                        <p class="wow bounceInUp">
+                            Naiyor is a Bangladeshi tradition where the newly wedded bride visits her parent’s house. The emotion, joy, hope, comfort and safety are associated with this journey, both for the girl and her Parents.<br><br>
+                            
+                            Naiyor is also a digital platform with complete travel solution. It intends to provide comfortable, safe and economical travel to Bangladesh as if a girl is visiting her parent’s home.<br><br>
+                            
+                            Naiyor is a registered company in UK and will operate through Naiyor Bangladesh Limited, enlisted at Registrar of Joint Stock Companies and Firms (RJSC), Bangladesh.<br><br>
+                            
+                            Naiyor Bangladesh Limited is committed to provide standard protocol services at the airport and safe transportation across Bangladesh through modern fleet of vehicles with security escorts.<br><br>
+                            
+                            Naiyor will utilize user-friendly latest digital platform and most secured payment gateway.<br><br>
+                            
+                            Naiyor will also provide secured International air ticket and hotel booking system in a very competitive price.<br><br>
+                            
+                            As such Naiyor will be your complete travel solution. </p>
+                        <button class="wow bounceInUp" >Learn More</button>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 row about_block_item justify-content-center align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 row about_block_item justify-content-center align-items-center wow bounceInRight">
                         <div class="col-6">
                             <div style="background-color: #c8d4c6;">
                                 <i class="fas fa-shield-alt"></i>
                                 <p>
-                                    <span>16</span> years of <br> experience
+                                    Fill up the<br>
+                                    <span>Quotation Format</span>
                                 </p>
                             </div>
                         </div>
@@ -225,7 +290,8 @@
                             <div style="background-color: #e4d6b8;">
                                 <i class="fas fa-dollar-sign"></i>
                                 <p>
-                                    <span>143</span><br> vehicles & drivers
+                                    Check mail for approval and <br>
+                                    <span>Complete Payment</span>
                                 </p>
                             </div>
                         </div>
@@ -233,7 +299,8 @@
                             <div style="background-color:#d3e6f8 ;">
                                 <i class="far fa-clock"></i>
                                 <p>
-                                    <span>144225</span><br> successful rides
+                                    Check mail for <br>
+                                    <span>Payment Confirmation</span>
                                 </p>
                             </div>
                         </div>
@@ -241,7 +308,16 @@
                             <div style="background-color:#ffdae5 ;">
                                 <i class="far fa-user"></i>
                                 <p>
-                                    <span>Zero</span><br> casualities
+                                    Check mail/whatsapp for <br>
+                                    <span>Vehicle and Driver details</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div style="background-color:#198754f3 ;">
+                                <i class="far fa-smile"></i>
+                                <p>
+                                    <span>Enjoy the</span><br> NAIYOR Services
                                 </p>
                             </div>
                         </div>
@@ -254,17 +330,17 @@
         <!-- /ABOUT US -->
 
         <!-- FEATURES -->
-        <section class="features">
+        <section class="features" id="features">
             <img src="./assets/img/baground_images/features_top.svg" alt="" />
 
             <div class="container"> 
                 <hr>
-                <h2 class="title col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+                <h2 class="title col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 wow bounceInUp">
                     BEST <span>FEATURES</span> FOR BEST <span>EXPERIENCES</span>
                 </h2>
-                <p class="col-12 col-lg-8 col-xl-8">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                <p class="col-12 col-lg-8 col-xl-8 wow bounceInUp">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
 
-                <div class="row">
+                <div class="row wow bounceInUp">
                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <div style="background-color: #d0dcce;">
                             <img src="./assets/img/feature_images/feature_image_one.svg" alt="" />
@@ -280,11 +356,11 @@
                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <div style="background-color: #fff1d0;">
                             <img src="./assets/img/feature_images/feature_image_three.svg" alt="" />
-                            <h5 class="col-12 col-md-10 col-lg-8 col-xl-6">Lorem Ipsum is simply dummy</h5>
+                            <h5>Lorem Ipsum is simply dummy</h5>
                         </div>
                     </div>
                 </div>
-                <button>Learn More</button>
+                <button class="wow bounceInUp">Learn More</button>
             </div>
             <img src="./assets/img/baground_images/features_bottom.svg" alt="" />
         </section>
@@ -295,7 +371,7 @@
         <section class="testimonials bg-5">
             <div class="container">
                 <hr>
-                <h2 class="title col-12 col-sm-12 col-md-10 col-lg-7 col-xl-7">
+                <h2 class="title col-12 col-sm-12 col-md-10 col-lg-7 col-xl-7 wow bounceInUp">
                     WE VALUE OUR CLIENT’S REVIEWS IN <span>EVERY CIRCUMSTANCES </span>
                 </h2> 
                 <div class="row">
@@ -335,10 +411,10 @@
         <!-- /TESTIMONIALS -->
 
         <!-- Career -->
-        <section class="career">
+        <section class="career" id="career">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 wow bounceInLeft">
                         <hr>
                         <h1>GET A <span>CAREER</span>PATH WITH US FOR A <span>GREAT EXPERIENCE</span></h1>
                         <p>It is a long established fact that a reader 
@@ -346,7 +422,7 @@
                             of a page when looking at its layout. </p>
                         <button>Learn More</button>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 wow bounceInRight">
                         <form>
                             <div class="mb-3">
                                 <h5 class="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-8">Share your experience to get your 
@@ -390,87 +466,130 @@
         <!-- /Career -->
 
         <!-- Contact Us -->
-        <!-- /Contact Us -->
-
-
-
-        <!--============================================-->
-        <!-- <section> begin ============================-->
-        <section class="py-6">
-
+        <section class="contact" id="contact">
             <div class="container">
-                <div class="row flex-center">
-                    <div class="col-auto mb-4">
-                        <ul class="list-unstyled list-inline mb-0">
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Home</a></li>
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Video</a></li>
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Destinations</a></li>
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Booking</a></li>
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Contact</a></li>
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Pricing</a></li>
-                            <li class="list-inline-item me3 me-sm-4"><a class="text-dark text-decoration-none" href="#!">Privacy Policy</a></li>
-                        </ul>
+                <hr>
+                <h1 class="title"><span>Share your</span> opinion <span>with us</span></h1>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col contact-form wow bounceInLeft">
+                        <!-- Contact Form -->
+                        <form>
+                            <input type="text" class="form-control mb-3" id="" placeholder="Your Name" >
+                            <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+                            <textarea class="mb-3" placeholder="Your Message" ></textarea>
+                            <button>Send</button>
+                        </form>
+                        <!-- /Contact Form -->
                     </div>
-                </div>
-                <div class="row flex-center">
-                    <div class="col-auto mb-4">
-                        <p class="mb-0 fs--1 text-dark">&copy; This template is made with&nbsp;
-                            <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3984F3" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="text-700" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
-                        </p>
-                    </div>
-                </div>
-                <div class="row flex-center">
-                    <div class="col-auto">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item me-3">
-                                <a class="text-decoration-none" href="#!">
-                                    <svg class="bi bi-youtube" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
-                    </svg></a>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 contact_info wow bounceInRight">
+                        <h4>CONTACT INFORMATION</h4>
+                       
+                        <ul class="list-unstyled">
+                            <li class="text-white">
+                                <i class="fas fa-phone-alt p-2"></i> +880 1555-115577 
                             </li>
-                            <li class="list-inline-item me-3">
-                                <a class="text-decoration-none" href="#!">
-                                    <svg class="bi bi-facebook" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#3984F3" viewBox="0 0 16 16">
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-                    </svg></a>
+                            <li class="text-white">
+                                <i class="fa fa-envelope p-2"></i> info@naiyor.net 
                             </li>
-                            <li class="list-inline-item me-3">
-                                <a href="#!">
-                                    <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#3984F3" viewBox="0 0 16 16">
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                    </svg></a>
+                            <li class="text-white">
+                                <i class="fab fa-whatsapp p-2"></i> +880 1555-115577 
                             </li>
-                            <li class="list-inline-item me-3">
-                                <a href="#!">
-                                    <svg class="bi bi-instagram" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#3984F3" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"> </path>
-                    </svg></a>
+                            <li class="text-white d-flex">
+                                <i class="fas fa-map-marker-alt p-2"></i>
+                                <p><strong>Naiyor Limited</strong><br> 186 Perth Road, Barking IG11 7UD, <br> United Kingdom. </p>
+                            </li>
+                            <li class="text-white d-flex">
+                                <i class="fas fa-map-marker-alt p-2">
+                                </i>
+                                <p><strong>Naiyor Bangladesh Limited</strong><br> H # 394 (1B), R # 6, Mirpur DOHS <br> Mirpur-1216, Dhaka, Bangaldesh. </p>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- end of .container-->
-
         </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
-
+        <!-- /Contact Us -->
+        <footer>
+            <div class="container-fluid px-0 bg-success">
+                <div class="container pt-4">
+                    <div class="d-md-flex justify-content-between">
+                        <div class="flex-column">
+                            <img alt="logo" src="./assets/img/logo.svg" height="50">
+                            <br>
+                            <br>
+                            <p class="text-wrap text-white"> Naiyor is a digital platform with complete travel solution. It intends <br> to provide comfortable, safe and economical travel to Bangladesh. <br><br> Naiyor Limited is a registered company in UK and will operate through <br> Naiyor Bangladesh Limited, enlisted at Registrar of <br> Joint Stock Companies and Firms (RJSC), Bangladesh. 
+                            </p>
+                        </div>
+                        <div class="flex-column">
+                            <h5 class="text-white">Contact</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-white">
+                                    <i class="fas fa-phone-alt p-2"></i> +880 1555-115577 
+                                </li>
+                                <li class="text-white">
+                                    <i class="fa fa-envelope p-2"></i> info@naiyor.net 
+                                </li>
+                                <li class="text-white">
+                                    <i class="fab fa-whatsapp p-2"></i> +880 1555-115577 
+                                </li>
+                                <li class="text-white d-flex">
+                                    <i class="fas fa-map-marker-alt p-2"></i>
+                                    <p><strong>Naiyor Limited</strong><br> 186 Perth Road, Barking IG11 7UD, <br> United Kingdom. </p>
+                                </li>
+                                <li class="text-white d-flex">
+                                    <i class="fas fa-map-marker-alt p-2">
+                                    </i>
+                                    <p><strong>Naiyor Bangladesh Limited</strong><br> H # 394 (1B), R # 6, Mirpur DOHS <br> Mirpur-1216, Dhaka, Bangaldesh. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-column">
+                            <h5 class="text-white">
+                                Quick Links
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-white" href="#">Home </a>
+                                </li>
+                                <li>
+                                    <a class="text-white" href="#about">About Us </a>
+                                </li>
+                                <li>
+                                    <a class="text-white" href="#contact">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright -->
+                <hr style="color: darkgreen; padding: 0px;">
+                <div class="container">
+                    <div class="d-flex justify-content-center pb-3">
+                        <span class="text-white small"> Copyright © 2021 Naiyor Bangladesh Ltd. All Rights Reserved. 
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+        </footer>
 
     </main>
     <!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
 
+    <!-- Return to Top -->
+    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 
 
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
@@ -489,49 +608,18 @@
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
+    <!-- Wow js-->
+    <script src="./plugins/wow/wow.min.js"></script>
+
+   
+
 
     <script>
 
-         // Hot Deals Slider
-         $('.hot_deals_slider').owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                1024: {
-                    items: 3
-                }
-            }
+        $(function(){
+        new WOW().init(); 
         });
-    
-        // Pracing Tab 
-        var tabs = document.querySelectorAll(".pricing_tabs ul li");
-        var tab_wraps = document.querySelectorAll(".pricing_tab_wrap");
-
-        tabs.forEach(function(tab, tab_index) {
-            tab.addEventListener("click", function() {
-                tabs.forEach(function(tab) {
-                    tab.classList.remove("active");
-                })
-                tab.classList.add("active");
-
-                tab_wraps.forEach(function(content, content_index) {
-                    if (content_index == tab_index) {
-                        content.style.display = "block";
-                    } else {
-                        content.style.display = "none";
-                    }
-                })
-
-            })
-        })
+        
 
         // testimonials
         $('.testimonial_slider').owlCarousel({
@@ -551,6 +639,45 @@
                 }
             }
         });
+
+
+        // ===== Scroll to Top ==== 
+        $(function(){
+            //Get the button
+            let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+            scrollFunction();
+            };
+
+            function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+        })
+
+        // Preloader
+        $(window).on('load', function() {
+            $('#preloader-active').delay(450).fadeOut('slow');
+            $('body').delay(450).css({
+                'overflow': 'visible'
+            });
+        });
+
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">

@@ -60,7 +60,7 @@
              
                 font-weight: 300;
                 color: $black;
-                text-align: left;
+                text-align: justify;
             }
             button {
                 background-color: $SubColorThree;
@@ -83,6 +83,11 @@
         .about_block_item {
             div {
                 padding: 10px 10px;
+                scale: 1;
+                transition: .3s;
+                &:hover{
+                    scale: 1.03;
+                }
                 div {
                     padding: 22px 2% 10px;
                     border-radius: 12px;
