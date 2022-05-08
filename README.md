@@ -1,0 +1,5 @@
+To view this unstyled markup visit [https://dev.naiyorbd.com/](https://dev.naiyorbd.com/)
+
+# Naiyor - Static  Website
+
+Naiyor is a Bangladeshi tradition where the newly wedded bride visits her parent’s house. The emotion, joy, hope, comfort and safety are associated with this journey, both for the girl and her Parents. Naiyor is also a digital platform with complete travel solution. It intends to provide comfortable, safe and economical travel to Bangladesh as if a girl is visiting her parent’s home. Naiyor is a registered company in UK and will operate through Naiyor Bangladesh Limited, enlisted at Registrar of Joint Stock Companies and Firms (RJSC), Bangladesh. Naiyor Bangladesh Limited is committed to provide standard protocol services at the airport and safe transportation across Bangladesh through modern fleet of vehicles with security escorts. Naiyor will utilize user-friendly latest digital platform and most secured payment gateway. Naiyor will also provide secured International air ticket and hotel booking system in a very competitive price. As such Naiyor will be your complete travel solution. 
