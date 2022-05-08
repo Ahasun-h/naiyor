@@ -41,3 +41,8 @@ Now you're set up to use this in a new project.
 
 # Author
 [Naiyor](https://dev.naiyorbd.com/) - Designer Developer
+
+#Special Credit
+All media asset credit goes to [ Nasib Hasan](https://www.facebook.com/Nasibbbbbb)
+UI\UX credit goes to [ Nasib Hasan](https://www.facebook.com/Nasibbbbbb)
+
